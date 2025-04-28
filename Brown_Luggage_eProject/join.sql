@@ -172,6 +172,14 @@ VALUES
 -- Insert into Products
 INSERT INTO Products (name, description, category_id, brand_id, price, gender)
 VALUES 
+	('Phụ kiện 1', 'Phụ kiện thời trang', 4, 1, 199000, 'unisex'),
+    ('Phụ kiện 2', 'Phụ kiện thời trang', 4, 2, 249000, 'unisex'),
+    ('Phụ kiện 3', 'Phụ kiện thời trang', 4, 1, 279000, 'unisex'),
+    ('Phụ kiện 4', 'Phụ kiện cao cấp', 4, 3, 399000, 'unisex'),
+    ('Phụ kiện 5', 'Phụ kiện da cao cấp', 4, 3, 459000, 'unisex'),
+    ('Phụ kiện 6', 'Phụ kiện thời trang', 4, 1, 199000, 'female'),
+    ('Phụ kiện 7', 'Phụ kiện thời trang', 4, 2, 219000, 'female'),
+    ('Phụ kiện 8', 'Phụ kiện thời trang', 4, 2, 259000, 'female'),
     -- Vali (category_id = 1, brand_id = 2)
     ('Vali Herschel 1', 'Vali cao cấp', 1, 2, 1200000, 'unisex'),
     ('Vali Herschel 2', 'Vali cao cấp', 1, 2, 1250000, 'unisex'),
@@ -214,6 +222,15 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- Insert into Product_Sizes
 INSERT INTO Product_Sizes (product_id, size_id)
 VALUES 
+    (26, 1), (26, 2), (26, 3), (26, 4), -- Phụ kiện 1
+    (27, 1), (27, 2), (27, 3), (27, 4), -- Phụ kiện 2
+    (28, 1), (28, 2), (28, 3), (28, 4), -- Phụ kiện 3
+    (29, 1), (29, 2), (29, 3), (29, 4), -- Phụ kiện 4
+    (30, 1), (30, 2), (30, 3), (30, 4), -- Phụ kiện 5
+    (31, 1), (31, 2), (31, 3), (31, 4), -- Phụ kiện 6
+    (32, 1), (32, 2), (32, 3), (32, 4), -- Phụ kiện 7
+    (33, 1), (33, 2), (33, 3), (33, 4), -- Phụ kiện 8
+
     (1, 2), (1, 3),
     (2, 2), (2, 3),
     (3, 2), (3, 3),
@@ -243,6 +260,15 @@ VALUES
 -- Insert into Product_colors
 INSERT INTO Product_colors (product_id, color_id)
 VALUES 
+    (26, 1), (26, 2), (26, 3), -- Phụ kiện 1
+    (27, 1), (27, 2), (27, 3), -- Phụ kiện 2
+    (28, 1), (28, 2), (28, 3), -- Phụ kiện 3
+    (29, 1), (29, 2), (29, 3), -- Phụ kiện 4
+    (30, 1), (30, 2), (30, 3), -- Phụ kiện 5
+    (31, 1), (31, 2), (31, 3), -- Phụ kiện 6
+    (32, 1), (32, 2), (32, 3), -- Phụ kiện 7
+    (33, 1), (33, 2), (33, 3), -- Phụ kiện 8
+
     (1, 1), (1, 2), (1, 3),
     (2, 2), (2, 3),
     (3, 1), (3, 3),
@@ -272,6 +298,15 @@ VALUES
 -- Insert into Product_images
 INSERT INTO Product_images (product_id, image_url, u_primary)
 VALUES 
+    (26, 'image/index/phukien1.jpg', 1),
+    (27, 'image/index/phukien2.jpg', 1),
+    (28, 'image/index/phukien3.jpg', 1),
+    (29, 'image/index/phukien4.jpg', 1),
+    (30, 'image/index/phukien5.jpg', 1),
+    (31, 'image/index/phukien6.jpg', 1),
+    (32, 'image/index/phukien7.jpg', 1),
+    (33, 'image/index/phukien8.jpg', 1),
+
     (1, 'image/index/vali1.jpg', 1),
     (2, 'image/index/vali2.jpg', 1),
     (3, 'image/index/vali3.jpg', 1),
@@ -301,8 +336,8 @@ VALUES
 -- Insert into Feedbacks
 INSERT INTO Feedbacks (user_id, product_id, message, rating, status)
 VALUES 
-    (3, 1, 'Very Bad', 1, 'approved'),
-    (3, 2, 'Very Good', 5, 'approved');
+    (1, 1, 'Very Bad', 1, 'approved'),
+    (2, 2, 'Very Good', 5, 'approved');
 
 
 
